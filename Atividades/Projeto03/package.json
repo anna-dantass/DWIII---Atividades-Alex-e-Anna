@@ -1,0 +1,13 @@
+{
+  "name": "projeto03-fatec-zona-sul",
+  "version": "1.0.0",
+  "description": "Portal da FATEC Zona Sul - Projeto 03 de Desenvolvimento Web III",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Alex Rodrigues de Oliveira e Anna Marina Dantas da Silva",
+  "license": "ISC",
+  "type": "module"
+}

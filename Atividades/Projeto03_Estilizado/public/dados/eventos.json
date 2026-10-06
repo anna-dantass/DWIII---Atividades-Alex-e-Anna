@@ -1,0 +1,62 @@
+[
+    {
+        "data": "2026-08-03",
+        "titulo": "Início das aulas do 2º semestre",
+        "descricao": "Recepção dos calouros e início do semestre letivo.",
+        "tipo": "academico"
+    },
+    {
+        "data": "2026-09-07",
+        "titulo": "Feriado - Independência do Brasil",
+        "descricao": "Não haverá aula.",
+        "tipo": "feriado"
+    },
+    {
+        "data": "2026-09-28",
+        "titulo": "Semana de Provas P1",
+        "descricao": "Avaliações da primeira etapa do semestre.",
+        "tipo": "academico"
+    },
+    {
+        "data": "2026-10-12",
+        "titulo": "Feriado - Nossa Senhora Aparecida",
+        "descricao": "Não haverá aula.",
+        "tipo": "feriado"
+    },
+    {
+        "data": "2026-10-19",
+        "titulo": "Semana de Tecnologia da FATEC Zona Sul",
+        "descricao": "Palestras, oficinas e apresentação de projetos dos alunos no auditório.",
+        "tipo": "evento"
+    },
+    {
+        "data": "2026-11-02",
+        "titulo": "Feriado - Finados",
+        "descricao": "Não haverá aula.",
+        "tipo": "feriado"
+    },
+    {
+        "data": "2026-11-09",
+        "titulo": "Hackathon Fatec Zona Sul",
+        "descricao": "Maratona de programação em equipes, aberta a todos os cursos.",
+        "tipo": "evento"
+    },
+    {
+        "data": "2026-11-20",
+        "titulo": "Feriado - Dia da Consciência Negra",
+        "descricao": "Não haverá aula.",
+        "tipo": "feriado"
+    },
+    {
+        "data": "2026-11-30",
+        "titulo": "Semana de Provas P2",
+        "descricao": "Avaliações da segunda etapa do semestre.",
+        "tipo": "academico"
+    },
+    {
+        "data": "2026-12-12",
+        "titulo": "Encerramento do semestre",
+        "descricao": "Último dia letivo do 2º semestre de 2026.",
+        "tipo": "academico"
+    }
+]

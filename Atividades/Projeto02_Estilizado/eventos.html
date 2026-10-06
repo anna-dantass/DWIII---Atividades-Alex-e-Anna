@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - FATEC Zona Sul</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="/img/imgfatec.jpeg" class="logo" alt="FATEC Zona Sul">
+        <div>
+            <h1>FATEC Zona Sul</h1>
+            <p>Faculdade de Tecnologia Dom Paulo Evaristo Arns</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="/">INÍCIO</a>
+        <a href="/vestibular">VESTIBULAR</a>
+        <a href="/cursos">CURSOS</a>
+        <a href="/infraestrutura">INFRAESTRUTURA</a>
+        <a href="/eventos">EVENTOS</a>
+        <a href="/quem-somos">QUEM SOMOS</a>
+    </nav>
+
+    <div class="banner banner-pagina">
+        <h2>Eventos</h2>
+        <p>Calendário e programação do semestre.</p>
+    </div>
+
+    <main>
+        <section>
+            <h2>Calendário - 2º Semestre de 2026</h2>
+            <p>Os eventos são carregados do arquivo <code>/dados/eventos.json</code> usando <code>fetch()</code>.</p>
+
+            <div class="filtros">
+                <button data-tipo="todos" onclick="mostrarEventos('todos')">Todos</button>
+                <button data-tipo="academico" onclick="mostrarEventos('academico')">Acadêmico</button>
+                <button data-tipo="evento" onclick="mostrarEventos('evento')">Eventos</button>
+                <button data-tipo="feriado" onclick="mostrarEventos('feriado')">Feriados</button>
+            </div>
+
+            <div id="listaEventos">Carregando...</div>
+        </section>
+    </main>
+
+    <footer>
+        FATEC ZONA SUL - DESENVOLVIMENTO WEB III - Projeto 02
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,606 @@
+/* ===== FONTE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ===== CORES E BASE ===== */
+:root {
+    --vermelho: #c8102e;
+    --vermelho-escuro: #8a0a1f;
+    --rosa: #ff4d6d;
+    --escuro: #14141c;
+    --escuro-2: #23232f;
+    --cinza: #6b6b7b;
+    --claro: #f4f5fa;
+    --branco: #ffffff;
+    --gradiente: linear-gradient(135deg, var(--rosa), var(--vermelho) 50%, var(--vermelho-escuro));
+    --sombra: 0 10px 30px rgba(20, 20, 28, 0.08);
+    --sombra-forte: 0 20px 40px rgba(200, 16, 46, 0.25);
+    --raio: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: var(--escuro);
+    line-height: 1.7;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 77, 109, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 70%, rgba(200, 16, 46, 0.06), transparent 40%),
+        var(--claro);
+    background-attachment: fixed;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--vermelho);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--rosa);
+}
+
+code {
+    padding: 2px 8px;
+    background: rgba(200, 16, 46, 0.08);
+    color: var(--vermelho);
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+/* Titulos das secoes com barrinha em gradiente */
+h2 {
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 12px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradiente);
+    border-radius: 4px;
+}
+
+h3 {
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+/* ===== TOPO ===== */
+header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 6%;
+    background: var(--escuro);
+    color: var(--branco);
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    padding: 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--gradiente);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    color: #b8b8c8;
+    font-size: 0.85rem;
+}
+
+/* ===== MENU ===== */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 6%;
+    background: rgba(20, 20, 28, 0.92);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #d8d8e4;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--branco);
+    transform: translateY(-2px);
+}
+
+nav a.ativo {
+    background: var(--gradiente);
+    color: var(--branco);
+    box-shadow: 0 6px 16px rgba(200, 16, 46, 0.4);
+}
+
+/* ===== BANNER ===== */
+.banner {
+    position: relative;
+    padding: 110px 6% 140px;
+    color: var(--branco);
+    text-align: center;
+    background:
+        linear-gradient(135deg, rgba(138, 10, 31, 0.92), rgba(20, 20, 28, 0.88)),
+        url('/img/imgfatec.jpeg') center / cover;
+    clip-path: ellipse(120% 100% at 50% 0%);
+}
+
+.banner h2 {
+    max-width: 800px;
+    margin: 0 auto 16px;
+    padding: 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    animation: subir 0.8s ease backwards;
+}
+
+.banner h2::after {
+    display: none;
+}
+
+.banner p {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    color: #f0d6da;
+    font-size: 1.1rem;
+    animation: subir 0.8s 0.2s ease backwards;
+}
+
+.banner .botao {
+    margin: 6px;
+    animation: subir 0.8s 0.4s ease backwards;
+}
+
+/* Banner menor das paginas internas */
+.banner-pagina {
+    padding: 70px 6% 100px;
+}
+
+.banner-pagina h2 {
+    font-size: 2.2rem;
+}
+
+.banner-pagina p {
+    margin-bottom: 0;
+}
+
+/* ===== CONTEUDO ===== */
+main {
+    position: relative;
+    width: 90%;
+    max-width: 1100px;
+    margin: -60px auto 50px;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 36px;
+    background: var(--branco);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    animation: subir 0.7s ease backwards;
+}
+
+main > section:nth-child(2) { animation-delay: 0.1s; }
+main > section:nth-child(3) { animation-delay: 0.2s; }
+main > section:nth-child(4) { animation-delay: 0.3s; }
+
+section > img {
+    width: 100%;
+    max-height: 340px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+section li {
+    position: relative;
+    padding: 6px 0 6px 30px;
+}
+
+section li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--vermelho);
+    font-weight: 700;
+}
+
+/* ===== GRID DE CARDS ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    padding: 26px;
+    background: var(--branco);
+    border: 1px solid #ececf3;
+    border-radius: var(--raio);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+/* Faixa em gradiente no topo do card */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradiente);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: transparent;
+    box-shadow: var(--sombra-forte);
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card p {
+    margin: 0 0 12px;
+    color: var(--cinza);
+    font-size: 0.92rem;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.15), rgba(200, 16, 46, 0.15));
+    border-radius: 16px;
+    transition: transform 0.3s;
+}
+
+.card:hover .icone {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+/* ===== BOTOES ===== */
+button,
+.botao {
+    display: inline-block;
+    padding: 12px 26px;
+    border: 0;
+    border-radius: 30px;
+    background: var(--gradiente);
+    color: var(--branco);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(200, 16, 46, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover,
+.botao:hover {
+    color: var(--branco);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(200, 16, 46, 0.45);
+}
+
+.botao.claro {
+    background: var(--branco);
+    color: var(--vermelho);
+}
+
+.filtros {
+    margin: 20px 0;
+}
+
+.filtros button {
+    margin: 0 8px 10px 0;
+    background: var(--claro);
+    color: var(--escuro);
+    box-shadow: none;
+}
+
+.filtros button.ativo {
+    background: var(--gradiente);
+    color: var(--branco);
+    box-shadow: 0 8px 20px rgba(200, 16, 46, 0.3);
+}
+
+/* ===== TABELA ===== */
+table {
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px #ececf3;
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+th {
+    background: var(--gradiente);
+    color: var(--branco);
+    font-weight: 600;
+}
+
+tr:nth-child(odd) td {
+    background: #fafafd;
+}
+
+tr:hover td {
+    background: rgba(255, 77, 109, 0.08);
+}
+
+/* ===== CURSOS ===== */
+.info-curso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0 20px;
+}
+
+.tag {
+    padding: 6px 16px;
+    background: rgba(200, 16, 46, 0.08);
+    color: var(--vermelho-escuro);
+    border: 1px solid rgba(200, 16, 46, 0.2);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ===== EVENTOS (linha do tempo) ===== */
+#listaEventos {
+    position: relative;
+    padding-left: 10px;
+}
+
+#listaEventos::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 45px;
+    width: 3px;
+    background: linear-gradient(var(--rosa), var(--vermelho-escuro));
+    border-radius: 3px;
+}
+
+.evento {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+    animation: subir 0.5s ease backwards;
+}
+
+.data {
+    position: relative;
+    z-index: 1;
+    min-width: 72px;
+    padding: 10px 6px;
+    background: var(--gradiente);
+    color: var(--branco);
+    text-align: center;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    box-shadow: 0 6px 16px rgba(200, 16, 46, 0.35);
+}
+
+.data span {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.evento > div:last-child {
+    flex: 1;
+    padding: 16px 20px;
+    background: var(--claro);
+    border-radius: 14px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.evento:hover > div:last-child {
+    transform: translateX(6px);
+    background: rgba(255, 77, 109, 0.08);
+}
+
+.evento h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.evento p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 0.88rem;
+}
+
+/* ===== QUEM SOMOS ===== */
+.membro {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membro:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-forte);
+}
+
+.membro img {
+    width: 160px;
+    height: 160px;
+    padding: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--gradiente);
+}
+
+.membro h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.membro ul {
+    display: table;
+    margin: 0 auto 24px;
+    text-align: left;
+}
+
+/* ===== RODAPE ===== */
+footer {
+    padding: 36px 20px;
+    background: var(--escuro);
+    color: #9a9aac;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-top: 4px solid var(--vermelho);
+}
+
+/* ===== PAGINA 404 ===== */
+.erro404 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, var(--escuro), var(--vermelho-escuro), var(--escuro-2), var(--vermelho));
+    background-size: 400% 400%;
+    color: var(--branco);
+    text-align: center;
+    animation: fundo 10s ease infinite;
+}
+
+.erro404 h1 {
+    margin: 0;
+    font-size: 160px;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.erro404 h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.erro404 .botao {
+    background: var(--branco);
+    color: var(--vermelho);
+}
+
+/* ===== ANIMACOES ===== */
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+}
+
+@keyframes fundo {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 700px) {
+    .banner {
+        padding: 70px 6% 100px;
+    }
+
+    .banner h2 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        margin-top: -40px;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    nav a {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    #listaEventos::before {
+        left: 42px;
+    }
+}

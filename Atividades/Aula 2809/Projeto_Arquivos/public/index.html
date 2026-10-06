@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+<meta charset="UTF-8">
+<title>Node.js Full</title>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/script.js" defer></script>
+</head>
+ 
+<body>
+<header>
+<img src="/img/imgvestibular.jpeg" class="logo">
+<div>
+<h1>DESENVOLVIMENTO WEB III</h1>
+<p>Node.js abrindo os arquivos</p>
+</div>
+</header>
+ 
+<nav>
+<a href="/">INICIO</a>
+<a href="/rota1">ROTA 1</a>
+<a href="/rota2">ROTA 2</a>
+<a href="/pdf/gabarito.pdf" target="_blank">PDF</a>
+</nav>
+ 
+<main>
+<section>
+<h2>ARQUIVOS ESTATICOS</h2>
+<p>Esta pagina utiliza HTML, CSS, JS, JSON, Imagem, PDF e Video</p>
+ 
+        <button onclick="testaJS()">TESTAR JAVASCRIPT</button>
+<span id="mensagemJS"></span>
+</section>
+ 
+    <section>
+<h2>IMAGENS</h2>
+<div class="grid">
+<img src="/img/imgfatec.jpeg"
+<p>JPEG: <code>imagem/jpeg</code></p>
+</div>
+<div>
+<img src="/img/imgvestibular.jpeg"
+<p>JPEG: <code>imagem/jpeg</code></p>
+</div>
+</section>
+ 
+    <section>
+<h2>ARQUVIO JSON</h2>
+<p>Carrega pelo JS usando <code>fetch()</code></p>
+<div id="dadosJson">Carregando...</div>
+</section>
+ 
+    <section>
+<h2>ARQUIVO PDF</h2>
+<a class="botao" href="/pdf/gabarito.pdf" target="_blank">
+            Abrir PDF
+</a>
+</section>
+ 
+    <section>
+<h2>VIDEOS</h2>
+<button onclick="trocarVideo('videoa.mp4')">Video A</button>
+<button onclick="trocarVideo('videob.mp4')">Video B</button>
+<button onclick="trocarVideo('videoc.mp4')">Video C</button>
+ 
+        <p>Executando: <b id="nomeVideo">videoa.mp4</b></p>
+ 
+        <video id="playerVideo" src="/video/videoa.mp4" controls></video>
+</section>
+ 
+    <section>
+<h2>TESTAR ROTAS</h2>
+<a class="botao" href="/rota1">ROTA 1</a>
+<a class="botao" href="/rota2">ROTA 2</a>
+<a class="botao erro" href="/naoexiste">ERRO 404</a>
+</section>
+</main>
+ 
+<footer>
+    FATEC - DESENVOLVIMENTO WEB III
+</footer>
+</body>
+</html>
